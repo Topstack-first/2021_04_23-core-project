@@ -1,0 +1,54 @@
+<div>
+    <div class="bulk-subheader">
+        Documents OCR
+    </div>
+    <div class="table-layout" fxLayout="column">
+        <div class="flex-p">
+            <div fxLayout="column" class="mat-elevation-z8">           
+                <div align="end">
+                    <mat-select placeholder="All Status" 
+                    [(ngModel)]="filterStatus" 
+                    (selectionChange)="filterStatusChange()" 
+                    name="filterStatus" 
+                    class="status-select" >
+                        <mat-option *ngFor="let status of statuses" [value]="status">
+                            {{status}}
+                        </mat-option>
+                    </mat-select>
+                    <span style="color: gray;">Show</span>
+                    <mat-select
+                    [(ngModel)]="pageSize"
+                    (selectionChange)="pageSizeOptionChange()" 
+                    class="page-size-select" >
+                        <mat-option *ngFor="let pageSizeOption of pageSizeOptions" [value]="pageSizeOption">
+                            {{pageSizeOption}}
+                        </mat-option>
+                    </mat-select>
+                    <span style="color: gray;padding-right: 20px;">entries</span>
+                </div>
+            </div>
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">       
+                <ng-container matColumnDef="title">
+                    <th mat-header-cell *matHeaderCellDef> Document Title </th>
+                    <td mat-cell *matCellDef="let element"> {{element.documentTitle}} </td>
+                </ng-container> 
+                <ng-container matColumnDef="network_path">
+                    <th mat-header-cell *matHeaderCellDef> Path </th>
+                    <td mat-cell *matCellDef="let element"> {{element.documentPath}} </td>
+                </ng-container>
+                <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef> Status </th>
+                    <td mat-cell *matCellDef="let element"> {{element.ocrStatus}} </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                <tr class="mat-row" *matNoDataRow>
+                    <td class="mat-cell" colspan="9999">
+                      No data to display
+                    </td>
+                </tr>
+            </table>
+            <mat-paginator #paginator [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"></mat-paginator>
+        </div>
+    </div>
+</div>

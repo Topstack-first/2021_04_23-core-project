@@ -1,0 +1,49 @@
+.table-layout{
+    margin: 40px !important;
+}
+.mat-column-title {
+    flex: none;
+    width: 30%;
+    color: gray;
+    text-align: center;
+}
+.mat-column-network_path {
+    flex: none;
+    width: 50%;
+    color: gray;
+}
+.mat-column-status {
+    flex: none;
+    width: 10%;
+    color: gray;
+    text-align: center;
+}
+.mat-column-action {
+    flex: none;
+    width: 10%;
+    color: gray;
+    text-align: center;
+}
+.mat-header-cell{
+    color: #09B3A9 !important;
+    font-size: medium;
+    text-align: center !important;
+}
+.status-select{
+    padding:5px;
+    margin:10px;
+    width: 200px;
+    border-radius: 10px;
+    border: solid 1px lightgray;
+    text-align: center;
+}
+.page-size-select{
+    padding:5px;
+    margin:10px;
+    width: 70px;
+    border: solid 1px lightgray;
+    text-align: center;
+}
+.table-border{
+    border: solid lightgray 1px;
+}

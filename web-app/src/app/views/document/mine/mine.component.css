@@ -1,0 +1,151 @@
+.bulk-action-select{
+    padding:5px;
+    margin:10px;
+    width: 180px;
+    border: solid 1px lightgray;
+    text-align: center;
+    border-radius: 10px;
+}
+.search-box{
+    display: inline-block;
+    border: solid lightgray 1px;
+    border-radius: 5px;
+    padding: 3px;
+}
+.search-input{
+    border: none;
+}
+.search-input:focus{
+    outline: none;
+}
+.btn-filter{
+    border: solid lightgray 1px;
+    border-radius: 5px;
+    margin-left: 10px;
+    height: 32px;
+    vertical-align: middle;
+}
+.page-size-select{
+    padding:5px;
+    margin:10px;
+    border-radius: 5px;
+    width: 70px;
+    border: solid 1px lightgray;
+    text-align: center;
+}
+.table-layout{
+    margin: 40px;
+}
+.table-border{
+    border: solid lightgray 1px;
+}
+.btn-apply
+{
+    background-color: #47aeff;
+    color: white;
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    font-size: small;
+    margin-top: 11px;
+}
+.btn-apply:hover
+{
+    background-color: #3da5f5;
+}
+.btn-apply:active
+{
+    background-color: #3490d6;
+}
+
+
+.mat-column-select {
+    flex: none;
+    width: 3%;
+    text-align: center;
+    padding:10px !important;
+}
+.mat-column-title {
+    flex: none;
+    width: 9%;
+    color: gray;
+    padding: 3px;
+}
+.mat-column-author {
+    flex: none;
+    width: 9%;
+    color: gray;
+    text-align: center;
+    padding: 3px;
+}
+.mat-column-department {
+    flex: none;
+    width: 9%;
+    text-align: center;
+    color: gray;
+    padding: 3px;
+}
+.mat-column-stakeholder {
+    flex: none;
+    width: 9%;
+    text-align: center;
+    color: gray;
+    padding: 3px;
+}
+.mat-column-event {
+    flex: none;
+    width: 9%;
+    text-align: center;
+    color: gray;
+    padding: 3px;
+}
+.mat-column-location {
+    flex: none;
+    width: 9%;
+    text-align: center;
+    color: gray;
+    padding: 3px;
+}
+.mat-column-category {
+    flex: none;
+    width: 8%;
+    text-align: center;
+    color: gray;
+    padding: 3px;
+}
+.mat-column-well {
+    flex: none;
+    width: 8%;
+    text-align: center;
+    color: gray;
+    padding: 3px;
+}
+.mat-column-date {
+    flex: none;
+    width: 8%;
+    text-align: center;
+    color: gray;
+    padding: 3px;
+}
+.mat-column-document_date {
+    flex: none;
+    width: 8%;
+    text-align: center;
+    color: gray;
+    padding: 5px !important;;
+}
+.mat-column-action {
+    flex: none;
+    width: 11%;
+    text-align: center;
+}
+
+.mat-header-cell{
+    color: #09B3A9;
+    font-size: medium;
+    text-align: center;
+}
+

@@ -1,0 +1,262 @@
+<nav class="navbar navbar-main navbar-expand">
+	<a class="navbar-brand">
+		<img src="./assets/images/CORE_Logo.png" />
+	</a>
+	<div class="collapse navbar-collapse h-100" id="navbarNav">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" routerLink="/core">
+					<i class="fas fa-home"></i>
+					CORE
+				</a>
+			</li>
+		</ul>
+		<nav-user-info class="ml-auto"></nav-user-info>
+	</div>
+</nav>
+<header class="home-header">
+	<div class="home-header-logo">
+		<img src="./assets/images/Petronas_Logo.png" class="h-100 w-auto" />
+	</div>
+	<div class="pl-3 h-100 d-flex justify-content-start align-items-center">
+		<img src="./assets/images/CORE_Logo_White.png" class="h-25 w-auto" />
+	</div>
+</header>
+
+<div class="home-content">
+	<nav class="navbar navbar-expand navbar-dark bg-purple p-0 w-100 overflow-auto no-scrollbar">
+		<button class="navbar-toggler text-primary border-0 ml-auto" type="button" data-toggle="collapse"
+			data-target="#navbarSecondary" aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon text-white"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSecondary">
+			<ul class="navbar-nav px-3 w-100">
+				<li class="nav-item p-2">
+					<a class="text-white h-100 text-nowrap" style="line-height: 1.8;" routerLink="/">
+						BUSINESS PLANNING
+					</a>
+				</li>
+				<li class="nav-item p-2">
+					<a class="text-white h-100 text-nowrap" style="line-height: 1.8;" routerLink="/">
+						COMMERCIAL
+					</a>
+				</li>
+				<li class="nav-item p-2">
+					<a class="text-white h-100 text-nowrap" style="line-height: 1.8;" routerLink="/">
+						EXPLORATION
+					</a>
+				</li>
+				<li class="nav-item p-2">
+					<a class="text-white h-100 text-nowrap" style="line-height: 1.8;" routerLink="/">
+						FINANCE AND IT
+					</a>
+				</li>
+				<li class="nav-item p-2">
+					<a class="text-white h-100 text-nowrap" style="line-height: 1.8;" routerLink="/">
+						HR AND ADMINNISTRATION
+					</a>
+				</li>
+				<li class="nav-item p-2">
+					<a class="text-white h-100 text-nowrap" style="line-height: 1.8;" routerLink="/">
+						HSE
+					</a>
+				</li>
+				<li class="nav-item p-2">
+					<a class="text-white h-100 text-nowrap" style="line-height: 1.8;" routerLink="/">
+						PROCUREMENT
+					</a>
+				</li>
+				<li class="nav-item p-2">
+					<a class="text-white h-100 text-nowrap" style="line-height: 1.8;" routerLink="/">
+						PROJECTS
+					</a>
+				</li>
+				<li class="nav-item p-2">
+					<a class="text-white h-100 text-nowrap" style="line-height: 1.8;" routerLink="/">
+						WELLS AND SUBSURFACE
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<nav class="navbar navbar-expand navbar-dark bg-purple-light p-0 w-100 overflow-auto no-scrollbar">
+		<button class="navbar-toggler text-primary border-0 ml-auto" type="button" data-toggle="collapse"
+			data-target="#navbarSecondary" aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon text-white"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSecondary">
+			<ul class="navbar-nav px-3 w-100">
+				<li class="nav-item p-2">
+					<a class="text-white h-100 text-nowrap" style="line-height: 1.8;" routerLink="/">
+						ALL PROJECTS
+					</a>
+				</li>
+				<li class="nav-item p-2">
+					<a class="text-white h-100 text-nowrap" style="line-height: 1.8;" routerLink="/">
+						KELIDANG KLUSTER PROJECT
+					</a>
+				</li>
+				<li class="nav-item p-2">
+					<a class="text-white h-100 text-nowrap" style="line-height: 1.8;" routerLink="/">
+						EXPLORATION EXTENSION
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="py-1">
+		<img src="./assets/images/home_banner.jpg" class="w-100 h-auto" />
+	</div>
+	<div class="row mx-0 py-1">
+		<div class="col-12 col-md-3 px-0 py-2 text-muted">
+			<div class="border border-light p-3">
+				<p class="lead font-weight-bold text-primary">Login</p>
+				<p>Logged in as [User]</p>
+				<button class="btn btn-link p-0" (click)="logout()">Log Out</button>
+			</div>
+			<div class="border border-light mt-3">
+				<video class="w-100 h-auto" controls preload="auto" src="https://pofo.themezaa.com/videos/video.mp4"></video>
+				<p class="text-dark mx-3 mt-3">Welcome to the NEW CORE@PCBL</p>
+				<p class="font-weight-light mx-3">
+					CORE is Centralized Online (data) Repository Ecosystem.
+					It is PCBL’s “one stop center” to access all structured and unstructured data.
+				</p>
+			</div>
+		</div>
+		<div class="col-12 col-md-9 px-0 pl-md-3 py-2">
+			<div class="border border-light p-3">
+				<div class="border border-light">
+					<div class="bg-primary text-light p-3">
+						CORE Deep Search
+					</div>
+					<div class="d-flex justify-content-between align-items-stretch">
+						<div class="flex-grow-1 p-3">
+							<div class="input-group deep-search">
+								<input type="text" class="form-control" placeholder="Search here">
+								<div class="input-group-append">
+									<span class="input-group-text">
+										<i class="fas fa-search"></i>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="flex-shrink-1 p-3">
+							<button class="btn btn-primary rounded-0 px-4">Search</button>
+						</div>
+					</div>
+				</div>
+				<div class="border border-light mt-3">
+					<div class="bg-primary text-light p-3">
+						Latest Documents
+					</div>
+				</div>
+				<div class="border border-light mt-3">
+					<div class="bg-primary text-light p-3">
+						Other Section
+					</div>
+					<div class="p-3 d-flex justify-content-between align-items-stretch">
+						<div class="flex-shrink-0" style="flex-basis: 40%">
+							<img class="w-100 h-auto" src="./assets/images/management-dashboard.jpg">
+						</div>
+						<div class="flex-grow-1 pl-3">
+							<h5 class="text-blue font-weight-bold">Management Dashboard</h5>
+							<p>
+								Management dashboard provides latest and consolidated key critical information coming from different
+								technical and administrative departments of PCBL.
+							</p>
+							<div class="text-right pt-5">
+								<a class="btn btn-primary text-light rounded-0 px-4" [routerLink]="['/']">Open</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="home-footer">
+	<div class="row">
+		<div class="col-6 col-md-3 pb-4 pt-5">
+			<p class="footer-title">What is CORE?</p>
+			<p class="mb-0">
+				CORE is Centralized Online (data) Repository Ecosystem. It is PCBL’s “one stop center” to access all structured
+				and unstructured data.
+			</p>
+			<div class="hit-counter">
+				<div>0</div>
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+				<div>4</div>
+				<div>5</div>
+				<div>6</div>
+			</div>
+			<div>
+				<p>Visit Today : 1</p>
+			</div>
+		</div>
+		<div class="col-6 col-md-3 pb-4 pt-5">
+			<a [routerLink]="['/']" class="footer-title">
+				Training Videos
+				<i class="fas fa-caret-right text-light ml-2"></i>
+			</a>
+			<a [routerLink]="['/']">
+				Introduction to CORE Portal
+			</a>
+			<a [routerLink]="['/']">
+				Deep Search and Filtering Options
+			</a>
+			<a [routerLink]="['/']">
+				Project Tracker and Document Management
+			</a>
+			<a [routerLink]="['/']">
+				Project Progress Update for Dashboard
+			</a>
+			<a [routerLink]="['/']">
+				Core Administration Workflows
+			</a>
+			<a [routerLink]="['/']">
+				Introduction to Management Dashboard
+			</a>
+		</div>
+		<div class="col-6 col-md-3 pb-4 pt-5">
+			<a [routerLink]="['/']" class="footer-title">
+				Resources
+				<i class="fas fa-caret-right text-light ml-2"></i>
+			</a>
+			<a [routerLink]="['/']">
+				Project Highlights
+			</a>
+			<a [routerLink]="['/']">
+				Risk Register
+			</a>
+			<a [routerLink]="['/']">
+				Issue Register
+			</a>
+			<a [routerLink]="['/']">
+				Abbreviations
+			</a>
+			<a [routerLink]="['/']">
+				PCBL Agreements
+			</a>
+		</div>
+		<div class="col-6 col-md-3 pb-4 pt-5">
+			<p class="footer-title">Contact CORE</p>
+			<a [routerLink]="['/']">
+				Change Password
+			</a>
+			<a [routerLink]="['/']">
+				Contact CORE Admin
+			</a>
+			<a [routerLink]="['/']">
+				Help
+			</a>
+		</div>
+	</div>
+	<div class="w-100 p-3 text-center bg-primary">
+		PCBL CORE – Copyright @ {{year}} PETRONAS Carigali Brunei Ltd. All rights reserved.
+	</div>
+</footer>

@@ -1,0 +1,138 @@
+<h1 mat-dialog-title style="box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);font-size: large;">
+    {{title}}
+    <button style="float: right;border: none;background-color: transparent;" (click)="close()">X</button>
+</h1>
+<div mat-dialog-content>
+    <div class="flex-p col" fxLayout="column" style="width: 40vw;color: gray;">
+        <p>Title</p>
+        <input mat-input [(ngModel)]="documentTitle">
+
+        <p style="margin-top: 20px;">Description</p>
+        <textarea mat-textarea [(ngModel)]="description"></textarea>
+
+        <div class="row" style="margin-top: 20px;margin-left: 0px;">
+            <mat-checkbox [(ngModel)]="noApprovalNeeded"></mat-checkbox>
+            <p style="margin-left: 10px;">No Approval Needed</p>
+        </div>
+
+        <p style="margin-top: 20px;">Web Address</p>
+        <input mat-input [(ngModel)]="webAddress">
+
+        <div align="end" style="margin-top: 20px;">
+            <span style="color: grey;margin-right: 15px;">{{fileName}}</span>
+            <button mat-button (click)="fileupload.click()" style="background-color: black;color: lightgrey;margin-right: 10px;">UPLOAD FILE</button>
+            
+            <button mat-button (click)="selectFile()" style="background-color: black;color: lightgrey;">SELECT FILE</button>
+        </div>
+
+
+        <p style="color: rgb(241, 69, 69);">Document Custom Content</p>
+        <textarea mat-textarea [(ngModel)]="documentContent"></textarea>
+        <p style="font-size: small;">If the content cannot be extracted, the document custom content will be used to display the document information</p>
+
+
+        <div class="row" style="margin-top: 25px;">
+            <div class="col-6">
+                <p>Category</p>
+                <mat-select placeholder="-Select Category-" [(ngModel)]="selectedCategory" class="doc-select" >
+                    <mat-option *ngFor="let category of categories" [value]="category">
+                        {{category}}
+                    </mat-option>
+                </mat-select>
+            </div>
+            <div class="col-6">
+                <p>Sub Category</p>
+                <mat-select placeholder="-Select Subcategory-" [(ngModel)]="selectedSubcategory" class="doc-select" >
+                    <mat-option *ngFor="let subcategory of subcategories" [value]="subcategory">
+                        {{subcategory}}
+                    </mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 12px;">
+            <div class="col-6">
+                <p>Department</p>
+                <mat-select placeholder="-Select Department-" [(ngModel)]="selectedDepartment" class="doc-select" >
+                    <mat-option *ngFor="let department of departments" [value]="department">
+                        {{department}}
+                    </mat-option>
+                </mat-select>
+            </div>
+            <div class="col-6">
+                <p>Stakeholder</p>
+                <mat-select placeholder="-Select Stakeholder-" [(ngModel)]="selectedStakeholder" class="doc-select" >
+                    <mat-option *ngFor="let stakeholder of stakeholders" [value]="stakeholder">
+                        {{stakeholder}}
+                    </mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 12px;">
+            <div class="col-6">
+                <p>Event</p>
+                <mat-select placeholder="-Select Event-" [(ngModel)]="selectedEvent" class="doc-select" >
+                    <mat-option *ngFor="let event of events" [value]="event">
+                        {{event}}
+                    </mat-option>
+                </mat-select>
+            </div>
+            <div class="col-6">
+                <p>Location</p>
+                <mat-select placeholder="-Select Location-" [(ngModel)]="selectedLocation" class="doc-select" >
+                    <mat-option *ngFor="let location of locations" [value]="location">
+                        {{location}}
+                    </mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 12px;">
+            <div class="col-6">
+                <p>Well</p>
+                <mat-select placeholder="-Select Well-" [(ngModel)]="selectedWell" class="doc-select" >
+                    <mat-option *ngFor="let well of wells" [value]="well">
+                        {{well}}
+                    </mat-option>
+                </mat-select>
+            </div>
+            <div class="col-6">
+                <p>Additional Tag</p>
+                <input mat-input placeholder="-ENTER Tag-" [(ngModel)]="additonalTag" class="doc-select">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 12px;">
+            <div class="col-6">
+                <p>Date</p>
+                <input mat-input type="date" placeholder="dd/mm/yy" class="doc-select">
+            </div>
+            <div class="col-6">
+                <p>Approval Status</p>
+                <mat-select placeholder="-Select Status-" [(ngModel)]="selectedApprovalStatus" class="doc-select" >
+                    <mat-option *ngFor="let selectedApprovalStatus of statuses" [value]="selectedApprovalStatus">
+                        {{selectedApprovalStatus}}
+                    </mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 12px;">
+            <div class="col-6">
+                <p>Notify User</p>
+                <input mat-input placeholder="All User" [(ngModel)]="notifyUser" class="doc-select">
+            </div>
+            <div class="col-6">
+                <p>Content Permission</p>
+                <mat-select placeholder="Private (editor only)" class="doc-select" multiple>
+                    <mat-option *ngFor="let permission of permissions" [value]="permission.name" [ngClass]="{ 'sub-option':permission.sub}">
+                        {{permission.name}}
+                    </mat-option>
+                </mat-select>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div mat-dialog-actions align="end">
+    <input #fileupload [hidden]="true" accept="*.*" type="file" id="uploadFile" name="uploadFile" (change)="handleFileInput($event)">
+    
+    <button mat-button (click)="submit();" style="background-color: black;color: lightgrey;margin-right: 10px;width: 150px;">{{submitButtonText}}</button>
+    <button mat-button (click)="close()" style="background-color: transparent;color: grey;border: solid lightgrey 1px;width: 150px;">Cancel</button>
+</div>

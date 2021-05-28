@@ -1,0 +1,114 @@
+<mat-sidenav-container>
+    <div class="container-fluid full-height">
+        <div class="document">
+            CORE | Document
+            <div style="height: 1px;" align="end">
+                <button class="btn-add-document" (click)="addDocument()">Add Document</button>
+            </div>
+        </div>
+        
+        <mat-tab-group (selectedTabChange)="tabClick($event)" animationDuration="0ms">
+            <mat-tab label="All">
+                <app-all #appAll [filters]="filters"></app-all>
+            </mat-tab>
+            <mat-tab label="Mine">
+                <app-mine #appMine [filters]="filters"></app-mine>
+            </mat-tab>
+            <mat-tab label="Approved">
+                <app-approved #appApproved [filters]="filters"></app-approved>
+            </mat-tab>
+            <mat-tab label="In Review">
+                <app-inreview #appInReview [filters]="filters"></app-inreview>
+            </mat-tab>
+            <mat-tab label="Rejected">
+                <app-rejected #appRejected [filters]="filters"></app-rejected>
+            </mat-tab>
+            <mat-tab label="OCR Queue">
+                <app-ocrqueue #appOCRQueue></app-ocrqueue>
+            </mat-tab>
+            <mat-tab label="Trash">
+                <app-trash #appTrash [filters]="filters"></app-trash>
+            </mat-tab>
+        </mat-tab-group>
+        
+    </div>
+    <mat-sidenav #filters position="end" class="filters">        
+        
+        <div fxLayout="row" fxLayoutAlign="left left" class="mat-elevation-z1">
+            <h3>Filters</h3>
+        </div>
+        <div perfectScrollbar>
+            <div fxLayout="column" class="filter-field">
+                <p>Date:</p>
+                <mat-select
+                [(ngModel)]="selectedDate"
+                class="filter-select" >
+                    <mat-option *ngFor="let date of dates" [value]="date">
+                        {{date}}
+                    </mat-option>
+                </mat-select>
+            </div>
+            <div fxLayout="column" class="filter-field">
+                <p>Category:</p>
+                <mat-select
+                [(ngModel)]="selectedCategory"
+                class="filter-select" >
+                    <mat-option *ngFor="let category of categories" [value]="category">
+                        {{category}}
+                    </mat-option>
+                </mat-select>
+            </div>
+            <div fxLayout="column" class="filter-field">
+                <p>Department:</p>
+                <mat-select
+                [(ngModel)]="selectedDepartment"
+                class="filter-select" >
+                    <mat-option *ngFor="let department of departments" [value]="department">
+                        {{department}}
+                    </mat-option>
+                </mat-select>
+            </div>
+            <div fxLayout="column" class="filter-field">
+                <p>Stakeholder:</p>
+                <mat-select
+                [(ngModel)]="selectedStakeholder"
+                class="filter-select" >
+                    <mat-option *ngFor="let stakeholder of stakeholders" [value]="stakeholder">
+                        {{stakeholder}}
+                    </mat-option>
+                </mat-select>
+            </div>
+            <div fxLayout="column" class="filter-field">
+                <p>Event:</p>
+                <mat-select
+                [(ngModel)]="selectedEvent"
+                class="filter-select" >
+                    <mat-option *ngFor="let event of events" [value]="event">
+                        {{event}}
+                    </mat-option>
+                </mat-select>
+            </div>
+            <div fxLayout="column" class="filter-field">
+                <p>Location:</p>
+                <mat-select
+                [(ngModel)]="selectedLocation"
+                class="filter-select" >
+                    <mat-option *ngFor="let location of locations" [value]="location">
+                        {{location}}
+                    </mat-option>
+                </mat-select>
+            </div>
+            <div fxLayout="column" class="filter-field">
+                <p>Well:</p>
+                <mat-select
+                [(ngModel)]="selectedWell"
+                class="filter-select" >
+                    <mat-option *ngFor="let well of wells" [value]="well">
+                        {{well}}
+                    </mat-option>
+                </mat-select>
+            </div>
+        </div>
+
+    </mat-sidenav>
+</mat-sidenav-container>

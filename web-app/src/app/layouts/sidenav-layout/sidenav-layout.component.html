@@ -1,0 +1,42 @@
+<nav class="navbar navbar-main navbar-expand">
+	<a class="navbar-brand">
+		<div class="nav-logo">
+			<img src="./assets/images/CORE_Icon.png" />
+			<img src="./assets/images/CORE_Logo.png" />
+		</div>
+	</a>
+	<div class="collapse navbar-collapse h-100" id="navbarNav">
+		<ul class="navbar-nav h-100">
+			<li class="nav-item">
+				<button class="btn sidenav-toggler" (click)="toggleNavbar()">
+					<i class="fas" [ngClass]="expandSidebar ? 'fa-times' : 'fa-bars'"></i>
+				</button>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" routerLink="/">
+					<i class="fas fa-home"></i>
+					HOME
+				</a>
+			</li>
+		</ul>
+		<nav-user-info class="ml-auto"></nav-user-info>
+	</div>
+</nav>
+
+<div class="sidebar-layout row mx-0">
+	<div class="col sidebar-left bg-dark" [ngClass]="{'expand': expandSidebar}">
+		<div class="sidebar-nav" *ngFor="let category of sidebarRoutes">
+			<div class="sidebar-nav-icon">
+				<img [src]="'./assets/icons/' + category.icon" *ngIf="category.icon" />
+			</div>
+			<div class="sidebar-nav-content">
+				<p class="sidebar-nav-category">{{category.name}}</p>
+				<a *ngFor="let link of category.childrens" [routerLink]="['/core' + link.path]">{{link.name}}</a>
+			</div>
+		</div>
+	</div>
+	<div class="col sidebar-right py-3" [ngClass]="{'expand': expandSidebar}">
+		
+		<router-outlet></router-outlet>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+<h1 mat-dialog-title style="box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);font-size: large;">
+    Bulk Restore Document
+    <button style="float: right;border: none;background-color: transparent;" (click)="close()">X</button>
+</h1>
+<div mat-dialog-content>
+    <div class="flex-p col" fxLayout="column" style="width: 25vw;color: gray;">
+        
+        <br>
+        <p style="text-align: center;">Are you sure you want to restore <br>{{data.length}} documents from trash?</p>
+        <br><br>
+    </div>
+    
+</div>
+<div mat-dialog-actions align="end">
+    <button class="btn-delete" (click)="restore()" style="margin-right: 10px;">Confirm</button>
+    <button class="btn-cancel" (click)="close()" style="margin-right: 15px;">Cancel</button>
+</div>

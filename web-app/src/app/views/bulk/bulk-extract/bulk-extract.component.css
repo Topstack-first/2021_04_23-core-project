@@ -1,0 +1,68 @@
+.table-layout{
+    margin: 40px;
+}
+
+.mat-column-title {
+    flex: none;
+    width: 10%;
+    color: gray;
+}
+.mat-column-description {
+    flex: none;
+    width: 10%;
+    color: gray;
+}
+.mat-column-network_path {
+    flex: none;
+    width: 20%;
+    color: gray;
+}
+.mat-column-total {
+    flex: none;
+    width: 10%;
+    text-align: center;
+    color: gray;
+}
+.mat-column-processed {
+    flex: none;
+    width: 10%;
+    color: #09B3A9;
+    text-align: center;
+}
+.mat-column-uploaded {
+    flex: none;
+    width: 10%;
+    color: gray;
+    text-align: center;
+}
+.mat-column-date {
+    flex: none;
+    width: 10%;
+    color: gray;
+    text-align: center;
+}
+.mat-column-user {
+    flex: none;
+    width: 10%;
+    color: gray;
+    text-align: center;
+}
+.mat-column-action {
+    flex: none;
+    width: 10%;
+    text-align: center;
+}
+
+.mat-header-cell{
+    color: #09B3A9 !important;
+    font-size: medium;
+    text-align: center !important;
+}
+
+.page-size-select{
+    padding:5px;
+    margin:10px;
+    width: 70px;
+    border: solid 1px lightgray;
+    text-align: center;
+}

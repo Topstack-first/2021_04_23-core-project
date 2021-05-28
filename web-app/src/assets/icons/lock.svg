@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.172" height="38.123" viewBox="0 0 25.172 38.123">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_632" data-name="Rectangle 632" width="19.151" height="16.055" transform="translate(966.06 535.313)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_1084" data-name="Group 1084" transform="translate(-962.957 -535.313)">
+    <rect id="Rectangle_630" data-name="Rectangle 630" width="24.172" height="21.568" rx="2.788" transform="translate(963.457 551.368)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <g id="Group_1083" data-name="Group 1083">
+      <g id="Group_1082" data-name="Group 1082" clip-path="url(#clip-path)">
+        <rect id="Rectangle_631" data-name="Rectangle 631" width="13.015" height="23.864" rx="6.508" transform="translate(969.035 539.436)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      </g>
+    </g>
+    <circle id="Ellipse_32" data-name="Ellipse 32" cx="3.719" cy="3.719" r="3.719" transform="translate(972.435 558.369)" fill="#fff"/>
+  </g>
+</svg>

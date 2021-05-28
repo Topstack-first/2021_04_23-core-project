@@ -1,0 +1,56 @@
+<h1 mat-dialog-title style="box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);font-size: large;">
+    Import Documents
+    <button style="float: right;border: none;background-color: transparent;" (click)="close()">X</button>
+</h1>
+<div mat-dialog-content>
+    <div class="flex-p col" fxLayout="column" style="width: 40vw;">
+        <div class="row">
+            <div class="import-label col-4">
+                Network Path
+            </div>
+            <mat-form-field class="col-8">
+                <input matInput [(ngModel)]="networkPath" placeholder="Network Path" >
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <div class="import-label col-4">
+                Bulk Extract Title
+            </div>
+            <mat-form-field class="col-8">
+                <input matInput [(ngModel)]="extractTitle" placeholder="Bulk Extract Title" >
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <div class="import-label col-4">
+                Bulk Extract Description
+            </div>
+            <mat-form-field class="col-8">
+                <textarea matInput [(ngModel)]="extractDescription"
+                            placeholder="Bulk Extract Description" 
+                            matTextareaAutosize 
+                            matAutosizeMinRows="2"
+                            matAutosizeMaxRows="5"></textarea>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <div class="import-label col-4">
+                Documents Type
+            </div>
+            <mat-form-field class="col-8">
+                <mat-select placeholder="Documents Type" [(ngModel)]="documentType" name="documentType">
+                    <mat-option *ngFor="let type of documentTypes" [value]="type">
+                        {{type}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        
+        
+    </div>
+    
+</div>
+<div mat-dialog-actions align="end">
+    
+    <button class="btn-process" (click)="submit()">Submit</button>
+    <button class="btn-cancel" (click)="close()">Cancel</button>
+</div>

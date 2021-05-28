@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mockup-a5897": {
+      "hosting": {
+        "CORE": [
+          "mockup-a5897"
+        ]
+      }
+    }
+  }
+}

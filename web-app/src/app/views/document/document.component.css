@@ -1,0 +1,74 @@
+.document{
+    font-size: large;
+    color: #09B3A9;
+    font-weight: bold;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
+    padding: 10px;
+}
+.full-height{
+    height: calc(100vh - 52px);
+}
+
+.btn-add-document
+{
+    margin-top: 17px;
+    margin-right: 40px;
+    background-color: #09B3A9;
+    color: white;
+    border: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 20px;
+    font-size: medium;
+    z-index: 10001;
+    position: relative;
+}
+.btn-add-document:hover
+{
+    background-color: #0b9188;
+}
+.btn-add-document:active
+{
+    background-color: #09726b;
+}
+
+.filters{
+    position: fixed;
+    overflow: hidden;
+    margin-top: 52px;
+    padding: 20px;
+}
+.filter-field{
+    margin-top: 30px;
+}
+.filter-field p{
+    color: gray;
+    font-size: large;
+}
+.filter-field .filter-select{
+    padding:5px;
+    width: 250px;
+    border: solid 1px lightgray;
+    text-align: center;
+}
+.doc-select{
+    padding:5px;
+    border: solid 1px lightgray;
+    width: 100%;
+}
+p{
+    margin-bottom: 6px;
+}
+.bulk-label{
+    color: #09B3A9;
+    padding-left: 10px;
+}
+.sub-option{
+    padding-left: 36px;
+}
+.import-label{
+    color: #09B3A9;
+    padding-top: 20px;
+}

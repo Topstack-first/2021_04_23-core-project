@@ -1,0 +1,37 @@
+<div class="auth-container shadow">
+	<app-auth-logo></app-auth-logo>
+	<div class="auth-form">
+		<h1>User Login</h1>
+		<div class="input-group">
+			<div class="input-group-prepend">
+				<span class="input-group-text">
+					<img src="./assets/icons/user.svg" />
+				</span>
+			</div>
+			<input type="text" class="form-control" placeholder="Username or Email">
+		</div>
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<span class="input-group-text">
+					<img src="./assets/icons/lock.svg" />
+				</span>
+			</div>
+			<input type="password" class="form-control" placeholder="Password">
+		</div>
+		<div class="input-group border-0 text-white small d-flex justify-content-between align-items-center">
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" id="rememberMe">
+				<label class="form-check-label font-weight-light user-select-none" for="rememberMe">
+					Remember me
+				</label>
+			</div>
+			<a class="btn btn-link btn-sm p-0" routerLink="/forgot-password">Forgot password?</a>
+		</div>
+		<div class="input-group border-0">
+			<button class="btn btn-primary btn-block">Log In</button>
+		</div>
+		<div class="input-group d-block border-0 text-white small font-weight-light text-center">
+			Need an account?&nbsp;<a class="btn btn-link btn-sm p-0" routerLink="/create-account">Sign Up</a>
+		</div>
+	</div>
+</div>

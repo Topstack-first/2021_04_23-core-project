@@ -1,0 +1,22 @@
+<h1 mat-dialog-title style="box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);font-size: large;">
+    Select File
+    <button style="float: right;border: none;background-color: transparent;" (click)="close()">X</button>
+</h1>
+<div mat-dialog-content>
+    <div class="flex-p col" fxLayout="column" style="width: 40vw;">
+        <div class="row">
+            <div class="import-label col-4">
+                Network Path
+            </div>
+            <mat-form-field class="col-8">
+                <input matInput [(ngModel)]="networkPath" placeholder="Network Path" >
+            </mat-form-field>
+        </div>
+    </div>
+    
+</div>
+<div mat-dialog-actions align="end">
+    
+    <button class="btn-process" (click)="submit()">Submit</button>
+    <button class="btn-cancel" (click)="close()">Cancel</button>
+</div>
